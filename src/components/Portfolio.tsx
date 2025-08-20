@@ -136,11 +136,11 @@ const Portfolio = () => {
     <section id="portfolio" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={isMobile ? undefined : { opacity: 0, y: 30 }}
-          animate={isMobile ? undefined : (inView ? { opacity: 1, y: 0 } : {})}
-          transition={isMobile ? undefined : { 
-            duration: 0.8,
-            delay: 0,
+          initial={isMobile ? {} : { opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ 
+            duration: isMobile ? 0 : 0.8,
+            delay: isMobile ? 0 : 0,
             ease: "easeOut"
           }}
           className="text-center mb-16"
@@ -157,11 +157,11 @@ const Portfolio = () => {
         {/* Carousel */}
         <div ref={ref} className="relative max-w-4xl mx-auto">
           <motion.div
-            initial={isMobile ? undefined : { opacity: 0, y: 50 }}
-            animate={isMobile ? undefined : (inView ? { opacity: 1, y: 0 } : {})}
-            transition={isMobile ? undefined : { 
-              duration: 0.8,
-              delay: 0,
+            initial={isMobile ? {} : { opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ 
+              duration: isMobile ? 0 : 0.8,
+              delay: isMobile ? 0 : 0,
               ease: "easeOut"
             }}
             className="relative aspect-[16/10] overflow-hidden shadow-2xl group cursor-pointer"

@@ -110,11 +110,11 @@ const Contact = () => {
     <section id="contact" className="py-24 bg-stone-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={isMobile ? undefined : { opacity: 0, y: 30 }}
-          animate={isMobile ? undefined : (inView ? { opacity: 1, y: 0 } : {})}
-          transition={isMobile ? undefined : { 
-            duration: 0.8,
-            delay: 0,
+          initial={isMobile ? {} : { opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ 
+            duration: isMobile ? 0 : 0.8,
+            delay: isMobile ? 0 : 0,
             ease: "easeOut"
           }}
           className="text-center mb-16"
@@ -131,11 +131,11 @@ const Contact = () => {
         <div ref={ref} className="grid lg:grid-cols-2 gap-16">
           {/* Contact Form */}
           <motion.div
-            initial={isMobile ? undefined : { opacity: 0, x: -50 }}
-            animate={isMobile ? undefined : (inView ? { opacity: 1, x: 0 } : {})}
-            transition={isMobile ? undefined : { 
-              duration: 0.8,
-              delay: 0,
+            initial={isMobile ? {} : { opacity: 0, x: -50 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ 
+              duration: isMobile ? 0 : 0.8,
+              delay: isMobile ? 0 : 0,
               ease: "easeOut"
             }}
             className="bg-white p-8 shadow-lg h-fit"
@@ -210,11 +210,11 @@ const Contact = () => {
 
           {/* Contact Info & Map */}
           <motion.div
-            initial={isMobile ? undefined : { opacity: 0, x: 50 }}
-            animate={isMobile ? undefined : (inView ? { opacity: 1, x: 0 } : {})}
-            transition={isMobile ? undefined : { 
-              duration: 0.8,
-              delay: 0.2,
+            initial={isMobile ? {} : { opacity: 0, x: 50 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ 
+              duration: isMobile ? 0 : 0.8,
+              delay: isMobile ? 0 : 0.2,
               ease: "easeOut"
             }}
             className="space-y-8"

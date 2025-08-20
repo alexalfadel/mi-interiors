@@ -57,11 +57,11 @@ const Services = () => {
     <section id="services" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={isMobile ? undefined : { opacity: 0, y: 30 }}
-          animate={isMobile ? undefined : (inView ? { opacity: 1, y: 0 } : {})}
-          transition={isMobile ? undefined : { 
-            duration: 0.8,
-            delay: 0,
+          initial={isMobile ? {} : { opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ 
+            duration: isMobile ? 0 : 0.8,
+            delay: isMobile ? 0 : 0,
             ease: "easeOut"
           }}
           className="text-center mb-16"
@@ -79,11 +79,11 @@ const Services = () => {
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              initial={isMobile ? undefined : { opacity: 0, y: 50 }}
-              animate={isMobile ? undefined : (inView ? { opacity: 1, y: 0 } : {})}
-              transition={isMobile ? undefined : { 
-                duration: 0.6,
-                delay: index * 0.1,
+              initial={isMobile ? {} : { opacity: 0, y: 50 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ 
+                duration: isMobile ? 0 : 0.6,
+                delay: isMobile ? 0 : index * 0.1,
                 ease: "easeOut"
               }}
               className="group bg-stone-50 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
