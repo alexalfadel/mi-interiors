@@ -72,15 +72,15 @@ html {
   
   /* Mobile-specific scroll padding to account for header */
   html {
-    scroll-padding-top: 100px;
+    scroll-padding-top: 85px;
   }
   
   /* Optimize specific elements for mobile scrolling */
   section {
     contain: layout style paint;
-    /* Add mobile-specific padding to ensure proper section visibility */
-    padding-top: 6rem;
-    margin-top: -1.5rem;
+    /* Reduce mobile padding to prevent content being pushed too far down */
+    padding-top: 5rem;
+    margin-top: -1rem;
   }
   
   /* Adjust hero section specifically */
@@ -91,9 +91,19 @@ html {
     min-height: 100dvh; /* Use dynamic viewport height for mobile */
   }
   
-  /* Ensure sections start properly on mobile */
+  /* Ensure sections start properly on mobile with tighter spacing */
   section:not(#home) {
-    scroll-margin-top: 80px;
+    scroll-margin-top: 70px;
+  }
+  
+  /* Specific adjustments for sections that were problematic */
+  section#about,
+  section#services,
+  section#portfolio,
+  section#testimonials,
+  section#contact {
+    padding-top: 4rem;
+    margin-top: -0.5rem;
   }
   
   /* Reduce repaints during scroll */

@@ -6,8 +6,8 @@ export const useInView = (threshold = 0.1, rootMargin = '0px', triggerOnce = fal
 
   // Adjust threshold and rootMargin for mobile
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-  const mobileThreshold = isMobile ? 0.05 : threshold;
-  const mobileRootMargin = isMobile ? '-60px 0px -20% 0px' : rootMargin;
+  const mobileThreshold = isMobile ? 0.01 : threshold;
+  const mobileRootMargin = isMobile ? '-40px 0px -10% 0px' : rootMargin;
 
   useEffect(() => {
     const observer = new IntersectionObserver(

@@ -15,7 +15,7 @@ const Header = () => {
       // Update active section based on scroll position
       const sections = ['home', 'about', 'services', 'portfolio', 'testimonials', 'contact'];
       const isMobile = window.innerWidth < 768;
-      const scrollOffset = isMobile ? 120 : 100;
+      const scrollOffset = isMobile ? 100 : 100;
       const scrollPosition = window.scrollY + scrollOffset;
       
       for (const section of sections) {
