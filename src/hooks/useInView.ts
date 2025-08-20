@@ -4,6 +4,11 @@ export const useInView = (threshold = 0.1, rootMargin = '0px', triggerOnce = fal
   const [inView, setInView] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
+  // Adjust threshold and rootMargin for mobile
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const mobileThreshold = isMobile ? 0.05 : threshold;
+  const mobileRootMargin = isMobile ? '-60px 0px -20% 0px' : rootMargin;
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -17,7 +22,7 @@ export const useInView = (threshold = 0.1, rootMargin = '0px', triggerOnce = fal
           setInView(false);
         }
       },
-      { threshold, rootMargin }
+      { threshold: mobileThreshold, rootMargin: mobileRootMargin }
     );
 
     const currentRef = ref.current;
@@ -30,7 +35,7 @@ export const useInView = (threshold = 0.1, rootMargin = '0px', triggerOnce = fal
         observer.unobserve(currentRef);
       }
     };
-  }, [threshold, rootMargin, triggerOnce]);
+  }, [mobileThreshold, mobileRootMargin, triggerOnce]);
 
   return [ref, inView] as const;
 };
