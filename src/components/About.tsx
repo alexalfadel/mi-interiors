@@ -4,7 +4,7 @@ import { useInView } from '../hooks/useInView';
 import headshotImg from '../assets/headshot.png'
 
 const About = () => {
-  const [ref, inView] = useInView(0.1, '0px 0px -20%');
+  const [ref, inView] = useInView(0.1, '0px 0px -20%', true);
 
   return (
     <section id="about" className="py-24 bg-stone-50">

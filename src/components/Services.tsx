@@ -9,7 +9,7 @@ import card5 from '../assets/card5.png'
 import card6 from '../assets/card6.png'
 
 const Services = () => {
-  const [ref, inView] = useInView(0.1, '0px 0px -20%');
+  const [ref, inView] = useInView(0.1, '0px 0px -20%', true);
 
   const services = [
     {

@@ -57,12 +57,6 @@ html {
 
 /* Mobile scroll performance optimizations */
 @media (max-width: 767px) {
-  * {
-    /* Reduce paint complexity on mobile */
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-  
   /* Optimize animations for mobile */
   .motion-reduce\:transition-none {
     transition: none !important;
@@ -72,5 +66,17 @@ html {
   body {
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
+    /* Reduce paint complexity on mobile */
+    will-change: scroll-position;
+  }
+  
+  /* Optimize specific elements for mobile scrolling */
+  section {
+    contain: layout style paint;
+  }
+  
+  /* Reduce repaints during scroll */
+  img {
+    will-change: auto;
   }
 }

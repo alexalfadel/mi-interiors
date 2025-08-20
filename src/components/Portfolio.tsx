@@ -10,7 +10,7 @@ import diningImg from '../assets/dining.png'
 import bathroomImg from '../assets/bathroom.png'
 
 const Portfolio = () => {
-  const [ref, inView] = useInView(0.1, '0px 0px -20%');
+  const [ref, inView] = useInView(0.1, '0px 0px -20%', true);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);

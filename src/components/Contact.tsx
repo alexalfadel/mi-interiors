@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
 import { MapPin, Phone, Mail } from 'lucide-react';
-import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api';
+import { useThrottle } from '../hooks/useThrottle';
 
 const Contact = () => {
-  const [ref, inView] = useInView(0.1, '0px 0px -20%');
+  const [ref, inView] = useInView(0.1, '0px 0px -20%', true);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -70,9 +70,9 @@ const Contact = () => {
     }
   };
 
-  // Reset form errors when scrolling away from contact section
-  React.useEffect(() => {
-    const handleScroll = () => {
+  const handleScroll = useThrottle(() => {
+    // Use requestAnimationFrame for smooth updates
+    requestAnimationFrame(() => {
       const contactSection = document.getElementById('contact');
       if (contactSection) {
         const rect = contactSection.getBoundingClientRect();
@@ -89,11 +89,15 @@ const Contact = () => {
           setErrors(newErrors);
         }
       }
-    };
+    });
+  }, 100); // Less frequent updates for form validation
+
+  // Reset form errors when scrolling away from contact section
+  React.useEffect(() => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [errors, formData]);
+  }, [handleScroll, errors, formData]);
   return (
     <section id="contact" className="py-24 bg-stone-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

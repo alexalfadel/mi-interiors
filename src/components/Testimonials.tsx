@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
 
 const Testimonials = () => {
-  const [ref, inView] = useInView(0.1, '0px 0px -20%');
+  const [ref, inView] = useInView(0.1, '0px 0px -20%', true);
 
   const testimonials = [
     {

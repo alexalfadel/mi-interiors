@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useThrottle } from '../hooks/useThrottle';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
-  useEffect(() => {
-    const handleScroll = () => {
+  const handleScroll = useThrottle(() => {
+    // Use requestAnimationFrame for smooth updates
+    requestAnimationFrame(() => {
       setIsScrolled(window.scrollY > 50);
       
       // Update active section based on scroll position
@@ -24,10 +26,13 @@ const Header = () => {
           }
         }
       }
-    };
+    });
+  }, 16); // ~60fps throttling
+
+  useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [handleScroll]);
 
   const navItems = [
     { name: 'Home', href: '#home' },
