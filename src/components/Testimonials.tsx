@@ -33,11 +33,11 @@ const Testimonials = () => {
     <section id="testimonials" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={isMobile ? {} : { opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ 
-            duration: isMobile ? 0 : 0.8,
-            delay: isMobile ? 0 : 0,
+          initial={isMobile ? undefined : { opacity: 0, y: 30 }}
+          animate={isMobile ? undefined : (inView ? { opacity: 1, y: 0 } : {})}
+          transition={isMobile ? undefined : { 
+            duration: 0.8,
+            delay: 0,
             ease: "easeOut"
           }}
           className="text-center mb-16"
@@ -55,11 +55,11 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
-              initial={isMobile ? {} : { opacity: 0, y: 50 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ 
-                duration: isMobile ? 0 : 0.6,
-                delay: isMobile ? 0 : index * 0.2,
+              initial={isMobile ? undefined : { opacity: 0, y: 50 }}
+              animate={isMobile ? undefined : (inView ? { opacity: 1, y: 0 } : {})}
+              transition={isMobile ? undefined : { 
+                duration: 0.6,
+                delay: index * 0.2,
                 ease: "easeOut"
               }}
               className="bg-stone-50 p-8 h-full flex flex-col justify-between hover:shadow-lg hover:-translate-y-2 transition-all duration-300 group"

@@ -21,11 +21,11 @@ const About = () => {
         <div ref={ref} className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Text Content */}
           <motion.div
-            initial={isMobile ? {} : { opacity: 0, x: -50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ 
-              duration: isMobile ? 0 : 0.8,
-              delay: isMobile ? 0 : 0,
+            initial={isMobile ? undefined : { opacity: 0, x: -50 }}
+            animate={isMobile ? undefined : (inView ? { opacity: 1, x: 0 } : {})}
+            transition={isMobile ? undefined : { 
+              duration: 0.8,
+              delay: 0,
               ease: "easeOut"
             }}
             className="space-y-8"
@@ -61,11 +61,11 @@ const About = () => {
 
           {/* Image */}
           <motion.div
-            initial={isMobile ? {} : { opacity: 0, x: 50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ 
-              duration: isMobile ? 0 : 0.8,
-              delay: isMobile ? 0 : 0.2,
+            initial={isMobile ? undefined : { opacity: 0, x: 50 }}
+            animate={isMobile ? undefined : (inView ? { opacity: 1, x: 0 } : {})}
+            transition={isMobile ? undefined : { 
+              duration: 0.8,
+              delay: 0.2,
               ease: "easeOut"
             }}
             className="relative"
