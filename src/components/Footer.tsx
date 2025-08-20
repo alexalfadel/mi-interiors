@@ -1,5 +1,6 @@
 import React from 'react';
-import { Instagram, Linkedin, Bookmark } from 'lucide-react';
+import { Instagram, Linkedin } from 'lucide-react';
+import pinterestIcon from '../assets/pinterest-113.png';
 
 const Footer = () => {
   return (
@@ -70,7 +71,11 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-green-700 transition-all duration-200 ease-out hover:scale-103 motion-reduce:hover:scale-100 motion-reduce:hover:underline"
               >
-                <Bookmark size={24} />
+                <img 
+                  src={pinterestIcon} 
+                  alt="Pinterest" 
+                  className="w-6 h-6 opacity-60 hover:opacity-100 transition-opacity duration-200"
+                />
               </a>
               <a 
                 href="https://linkedin.com/in/alexandraalfadel" 
