@@ -1,6 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
+import card1 from '../assets/card1.png'
+import card2 from '../assets/card2.png'
+import card3 from '../assets/card3.png'
+import card4 from '../assets/card4.png'
+import card5 from '../assets/card5.png'
+import card6 from '../assets/card6.png'
 
 const Services = () => {
   const [ref, inView] = useInView(0.1, '0px 0px -20%');
@@ -9,32 +15,32 @@ const Services = () => {
     {
       title: 'Full Home Design',
       description: 'Complete interior design services from concept to completion, creating cohesive spaces throughout your home.',
-      image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: card1
     },
     {
       title: 'Space Planning',
       description: 'Thoughtful layout design that maximizes functionality while maintaining aesthetic appeal.',
-      image: 'https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: card2
     },
     {
       title: 'Color Consultation',
       description: 'Expert color selection and palette development to create the perfect mood and atmosphere.',
-      image: 'https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: card3
     },
     {
       title: 'Furniture Selection',
       description: 'Curated furniture and decor selection that reflects your style and enhances your lifestyle.',
-      image: 'https://images.pexels.com/photos/1571457/pexels-photo-1571457.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: card4
     },
     {
       title: 'Project Management',
       description: 'Comprehensive project oversight ensuring timelines, budgets, and quality standards are met.',
-      image: 'https://images.pexels.com/photos/1571456/pexels-photo-1571456.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: card5
     },
     {
       title: 'Styling & Staging',
       description: 'Final styling touches and home staging services to showcase your space at its absolute best.',
-      image: 'https://images.pexels.com/photos/1571455/pexels-photo-1571455.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: card6
     }
   ];
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import heroImg from '../assets/hero.png'
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -11,11 +12,11 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+      {/* {heroImg} */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
         style={{
-          backgroundImage: 'url("https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=2000")'
+          backgroundImage: `url(${heroImg})`
         }}
       >
         <div className="absolute inset-0 bg-black/40"></div>

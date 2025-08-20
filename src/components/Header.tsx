@@ -49,7 +49,7 @@ const Header = () => {
             <h1 className={`text-2xl font-serif font-bold cursor-pointer group relative overflow-hidden ${
               isScrolled ? 'text-gray-900' : 'text-white'
             }`}>
-              <span className="relative z-10">Miranda Irwin Interiors</span>
+              <span className="relative z-10">M I Interiors</span>
               {/* Glimmer effect for motion users */}
               <span className={`absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out motion-reduce:hidden ${
                 isScrolled ? 'via-gray-400/20' : 'via-white/20'

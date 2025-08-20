@@ -220,17 +220,17 @@ const Contact = () => {
                 
                 <div className="flex items-center space-x-4 group cursor-pointer hover:text-green-700 transition-colors duration-300">
                   <Phone size={24} className="text-green-700 flex-shrink-0" />
-                  <div onClick={() => window.location.href = 'tel:+15035550123'}>
+                  <div onClick={() => window.location.href = 'tel:+16504651676'}>
                     <p className="font-medium text-gray-900">Phone</p>
-                    <p className="text-gray-600 group-hover:text-green-600 transition-colors duration-300">(503) 555-0123</p>
+                    <p className="text-gray-600 group-hover:text-green-600 transition-colors duration-300">(650) 465-1676</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center space-x-4 group cursor-pointer hover:text-green-700 transition-colors duration-300">
                   <Mail size={24} className="text-green-700 flex-shrink-0" />
-                  <div onClick={() => window.location.href = 'mailto:hello@mirandairwin.com'}>
+                  <div onClick={() => window.location.href = 'mailto:hello@miinteriors.com'}>
                     <p className="font-medium text-gray-900">Email</p>
-                    <p className="text-gray-600 group-hover:text-green-600 transition-colors duration-300">hello@mirandairwin.com</p>
+                    <p className="text-gray-600 group-hover:text-green-600 transition-colors duration-300">hello@miinteriors.com</p>
                   </div>
                 </div>
               </div>

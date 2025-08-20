@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
+import headshotImg from '../assets/headshot.png'
 
 const About = () => {
   const [ref, inView] = useInView(0.1, '0px 0px -20%');
@@ -28,7 +29,7 @@ const About = () => {
             
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
               <p>
-                With over a decade of experience in interior design, Miranda Irwin brings a unique blend 
+                With over a decade of experience in interior design, Miranda brings a unique blend 
                 of creativity, functionality, and timeless elegance to every project. Her approach centers 
                 on understanding each client's lifestyle and vision to create spaces that are both beautiful 
                 and deeply personal.
@@ -61,8 +62,8 @@ const About = () => {
           >
             <div className="aspect-square bg-gray-200 rounded-none shadow-2xl overflow-hidden relative">
               <img 
-                src="https://images.pexels.com/photos/3844788/pexels-photo-3844788.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Miranda Irwin"
+                src={headshotImg}
+                alt="Miranda I"
                 className="w-full h-full object-cover"
               />
             </div>

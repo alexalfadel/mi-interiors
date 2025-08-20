@@ -2,6 +2,12 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
 import { X } from 'lucide-react';
+import kitchenImg from '../assets/kitchen.png'
+import masterImg from '../assets/master.png'
+import readingImg from '../assets/reading.png'
+import livingRoomImg from '../assets/livingroom.png'
+import diningImg from '../assets/dining.png'
+import bathroomImg from '../assets/bathroom.png'
 
 const Portfolio = () => {
   const [ref, inView] = useInView(0.1, '0px 0px -20%');
@@ -17,32 +23,32 @@ const Portfolio = () => {
   const projects = [
     {
       title: 'Modern Minimalist Living',
-      image: 'https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: livingRoomImg,
       category: 'Residential'
     },
     {
       title: 'Warm Contemporary Kitchen',
-      image: 'https://images.pexels.com/photos/1571452/pexels-photo-1571452.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: kitchenImg,
       category: 'Residential'
     },
     {
       title: 'Elegant Master Suite',
-      image: 'https://images.pexels.com/photos/1571451/pexels-photo-1571451.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: masterImg,
       category: 'Residential'
     },
     {
       title: 'Cozy Reading Nook',
-      image: 'https://images.pexels.com/photos/1571450/pexels-photo-1571450.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: readingImg,
       category: 'Residential'
     },
     {
       title: 'Sophisticated Dining',
-      image: 'https://images.pexels.com/photos/1571449/pexels-photo-1571449.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: diningImg,
       category: 'Residential'
     },
     {
       title: 'Tranquil Bathroom Retreat',
-      image: 'https://images.pexels.com/photos/1571448/pexels-photo-1571448.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: bathroomImg,
       category: 'Residential'
     }
   ];
