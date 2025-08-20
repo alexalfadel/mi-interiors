@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-serif font-bold mb-4 text-gray-900">Miranda Irwin Interiors</h3>
+            <h3 className="text-2xl font-serif font-bold mb-4 text-gray-900">M I Interiors</h3>
             <p className="text-gray-600 leading-relaxed">
               Creating timeless, beautiful spaces that reflect your unique style and enhance your everyday life.
             </p>
@@ -35,29 +35,29 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-medium mb-4 text-gray-900">Contact</h4>
             <div className="space-y-2 text-gray-600">
-              <p>123 Design District</p>
-              <p>Portland, OR 97205</p>
+              <p>547 SW Main St</p>
+              <p>Portland, OR 97204</p>
               <p>
                 <a 
-                  href="tel:+15035550123"
+                  href="tel:+16504651676"
                   className="hover:text-green-700 transition-all duration-200 ease-out hover:underline motion-reduce:transition-colors"
                 >
-                  (503) 555-0123
+                  (650) 465-1676
                 </a>
               </p>
               <p>
                 <a 
-                  href="mailto:hello@mirandairwin.com"
+                  href="mailto:hello@miinteriors.com"
                   className="hover:text-green-700 transition-all duration-200 ease-out hover:underline motion-reduce:transition-colors"
                 >
-                  hello@mirandairwin.com
+                  hello@miinteriors.com
                 </a>
               </p>
             </div>
             
             <div className="flex space-x-4 mt-6">
               <a 
-                href="https://instagram.com/mirandairwininteriors" 
+                href="https://instagram.com/xelaweb" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-green-700 transition-all duration-200 ease-out hover:scale-103 motion-reduce:hover:scale-100 motion-reduce:hover:underline"
@@ -65,7 +65,7 @@ const Footer = () => {
                 <Instagram size={24} />
               </a>
               <a 
-                href="https://pinterest.com/mirandairwininteriors" 
+                href="https://pinterest.com/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-green-700 transition-all duration-200 ease-out hover:scale-103 motion-reduce:hover:scale-100 motion-reduce:hover:underline"
@@ -73,7 +73,7 @@ const Footer = () => {
                 <Bookmark size={24} />
               </a>
               <a 
-                href="https://linkedin.com/in/mirandairwin" 
+                href="https://linkedin.com/in/alexandraalfadel" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-green-700 transition-all duration-200 ease-out hover:scale-103 motion-reduce:hover:scale-100 motion-reduce:hover:underline"
@@ -86,7 +86,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-300 pt-8 text-center">
           <p className="text-gray-500">
-            © 2025 Miranda Irwin Interiors. All rights reserved.
+            © 2025 M I Interiors. All rights reserved.
           </p>
         </div>
       </div>

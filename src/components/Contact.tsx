@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
 import { MapPin, Phone, Mail } from 'lucide-react';
+import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api';
 
 const Contact = () => {
   const [ref, inView] = useInView(0.1, '0px 0px -20%');
@@ -212,9 +213,9 @@ const Contact = () => {
               <div className="space-y-6">
                 <div className="flex items-center space-x-4 group cursor-pointer hover:text-green-700 transition-colors duration-300">
                   <MapPin size={24} className="text-green-700 flex-shrink-0" />
-                  <div onClick={() => window.open('https://maps.google.com/?q=123+Design+District,+Portland,+OR+97205', '_blank')}>
+                  <div onClick={() => window.open('https://maps.google.com/?q=547+SW+Main+St,+Portland,+OR+97204', '_blank')}>
                     <p className="font-medium text-gray-900">Studio Location</p>
-                    <p className="text-gray-600 group-hover:text-green-600 transition-colors duration-300">123 Design District, Portland, OR 97205</p>
+                    <p className="text-gray-600 group-hover:text-green-600 transition-colors duration-300">547 SW Main St, Portland, OR 97204</p>
                   </div>
                 </div>
                 
@@ -237,13 +238,30 @@ const Contact = () => {
             </div>
 
             {/* Map Placeholder */}
-            <div className="bg-gray-200 h-64 flex items-center justify-center shadow-lg">
+            {/* <div className="bg-gray-200 h-64 flex items-center justify-center shadow-lg">
               <div className="text-center">
                 <MapPin size={48} className="text-gray-400 mx-auto mb-2" />
                 <p className="text-gray-500">Google Maps Integration</p>
                 <p className="text-sm text-gray-400">Portland Design District</p>
               </div>
-            </div>
+            </div> */}
+            <div className="relative shadow-lg rounded overflow-hidden">
+  <iframe
+    title="Studio Location"
+    src="https://www.google.com/maps?q=547+SW+Main+St,+Portland,+OR+97205&output=embed"
+    className="w-full h-64 border-0"
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+  <a
+    href="https://maps.google.com/?q=547+SW+Main+St,+Portland,+OR+97204"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="absolute bottom-3 right-3 bg-white/90 backdrop-blur px-3 py-1.5 text-sm rounded shadow hover:bg-white transition"
+  >
+    Open in Google Maps
+  </a>
+</div>
           </motion.div>
         </div>
       </div>

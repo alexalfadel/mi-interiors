@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.20.7",
     "framer-motion": "^12.23.12",
     "intersection-observer": "^0.12.2",
     "lucide-react": "^0.344.0",
