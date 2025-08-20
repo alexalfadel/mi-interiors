@@ -14,17 +14,17 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = "Miranda Irwin Interiors - Timeless Interior Design in Portland",
-  description = "Transform your space with Miranda Irwin's expert interior design services. Specializing in residential design, space planning, and creating beautiful, functional homes in Portland, Oregon.",
+  title = "M I Interiors - Timeless Interior Design in Portland",
+  description = "Transform your space with Miranda's expert interior design services. Specializing in residential design, space planning, and creating beautiful, functional homes in Portland, Oregon.",
   keywords = "interior design, Portland interior designer, residential design, home design, space planning, interior decorator, Miranda Irwin, luxury interiors, modern design, timeless design",
   image = "/src/assets/hero.png",
-  url = "https://mirandairwininteriors.com",
+  url = "https://miinteriors.netlify.app",
   type = "website",
-  author = "Miranda Irwin",
+  author = "Miranda I",
   publishedTime,
   modifiedTime
 }) => {
-  const siteTitle = "Miranda Irwin Interiors";
+  const siteTitle = "M I Interiors";
   const fullTitle = title.includes(siteTitle) ? title : `${title} | ${siteTitle}`;
 
   return (
@@ -76,14 +76,14 @@ const SEO: React.FC<SEOProps> = ({
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "InteriorDesigner",
-          "name": "Miranda Irwin Interiors",
+          "name": "M I Interiors",
           "description": description,
           "url": url,
           "logo": `${url}/logo.png`,
           "image": image,
           "founder": {
             "@type": "Person",
-            "name": "Miranda Irwin",
+            "name": "Miranda I",
             "jobTitle": "Interior Designer"
           },
           "address": {
@@ -119,12 +119,12 @@ const SEO: React.FC<SEOProps> = ({
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
-          "name": "Miranda Irwin Interiors",
+          "name": "M I Interiors",
           "description": "Professional interior design services specializing in residential spaces, full home design, space planning, and luxury interiors.",
           "serviceType": "Interior Design",
           "provider": {
             "@type": "Person",
-            "name": "Miranda Irwin"
+            "name": "Miranda I"
           },
           "areaServed": "Portland, Oregon",
           "hasOfferCatalog": {
