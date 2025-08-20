@@ -211,12 +211,11 @@ const Portfolio = () => {
           ref={thumbnailScrollRef}
           className={`mt-12 pb-4 ${
             isMobile 
-              ? 'flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide space-x-3 px-4' 
+              ? 'flex overflow-x-auto snap-x snap-mandatory scrollbar-hide space-x-3 px-4' 
               : 'flex justify-center space-x-4 overflow-x-auto'
           }`}
           style={isMobile ? {
-            maskImage: 'linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent)',
-            WebkitMaskImage: 'linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent)'
+            scrollBehavior: 'auto'
           } : {}}
         >
           {projects.map((project, index) => (

@@ -47,8 +47,30 @@ html {
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+  /* Improve scroll performance on mobile */
+  -webkit-overflow-scrolling: touch;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
+}
+
+/* Mobile scroll performance optimizations */
+@media (max-width: 767px) {
+  * {
+    /* Reduce paint complexity on mobile */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+  /* Optimize animations for mobile */
+  .motion-reduce\:transition-none {
+    transition: none !important;
+  }
+  
+  /* Improve touch scrolling */
+  body {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
 }
