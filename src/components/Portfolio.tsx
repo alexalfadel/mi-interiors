@@ -139,7 +139,8 @@ const Portfolio = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ 
-            duration: isMobile ? 0.2 : 0.8,
+            duration: isMobile ? 0.05 : 0.8,
+            delay: isMobile ? 0 : 0,
             ease: "easeOut"
           }}
           className="text-center mb-16"
@@ -159,7 +160,8 @@ const Portfolio = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ 
-              duration: isMobile ? 0.25 : 0.8,
+              duration: isMobile ? 0.05 : 0.8,
+              delay: isMobile ? 0 : 0,
               ease: "easeOut"
             }}
             className="relative aspect-[16/10] overflow-hidden shadow-2xl group cursor-pointer"

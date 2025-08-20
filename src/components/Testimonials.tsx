@@ -1,9 +1,18 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
 
 const Testimonials = () => {
   const [ref, inView] = useInView(0.1, '0px 0px -20%', true);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const testimonials = [
     {
@@ -27,7 +36,8 @@ const Testimonials = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ 
-            duration: window.innerWidth < 768 ? 0.2 : 0.8,
+            duration: isMobile ? 0.05 : 0.8,
+            delay: isMobile ? 0 : 0,
             ease: "easeOut"
           }}
           className="text-center mb-16"
@@ -48,8 +58,8 @@ const Testimonials = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ 
-                duration: window.innerWidth < 768 ? 0.2 : 0.6,
-                delay: window.innerWidth < 768 ? 0 : index * 0.2,
+                duration: isMobile ? 0.05 : 0.6,
+                delay: isMobile ? 0 : index * 0.2,
                 ease: "easeOut"
               }}
               className="bg-stone-50 p-8 h-full flex flex-col justify-between hover:shadow-lg hover:-translate-y-2 transition-all duration-300 group"

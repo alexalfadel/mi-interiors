@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
 import card1 from '../assets/card1.png'
@@ -10,6 +11,14 @@ import card6 from '../assets/card6.png'
 
 const Services = () => {
   const [ref, inView] = useInView(0.1, '0px 0px -20%', true);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const services = [
     {
@@ -51,7 +60,8 @@ const Services = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ 
-            duration: window.innerWidth < 768 ? 0.2 : 0.8,
+            duration: isMobile ? 0.05 : 0.8,
+            delay: isMobile ? 0 : 0,
             ease: "easeOut"
           }}
           className="text-center mb-16"
@@ -72,8 +82,8 @@ const Services = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ 
-                duration: window.innerWidth < 768 ? 0.2 : 0.6,
-                delay: window.innerWidth < 768 ? 0 : index * 0.1,
+                duration: isMobile ? 0.05 : 0.6,
+                delay: isMobile ? 0 : index * 0.1,
                 ease: "easeOut"
               }}
               className="group bg-stone-50 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
