@@ -35,7 +35,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <motion.h1 
-          initial={{ opacity: 0, y: 30 }}
+          initial={isMobile ? {} : { opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: isMobile ? 0 : 0.8, delay: isMobile ? 0 : 0.2 }}
           className="text-5xl md:text-7xl font-serif font-bold text-white mb-6 leading-tight"
@@ -44,7 +44,7 @@ const Hero = () => {
         </motion.h1>
         
         <motion.p 
-          initial={{ opacity: 0, y: 30 }}
+          initial={isMobile ? {} : { opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: isMobile ? 0 : 0.8, delay: isMobile ? 0 : 0.4 }}
           className="text-xl md:text-2xl text-white/90 mb-8 font-light"
@@ -53,7 +53,7 @@ const Hero = () => {
         </motion.p>
         
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={isMobile ? {} : { opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: isMobile ? 0 : 0.8, delay: isMobile ? 0 : 0.6 }}
         >
@@ -68,7 +68,7 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <motion.div 
-        initial={{ opacity: 0 }}
+        initial={isMobile ? {} : { opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: isMobile ? 0 : 1, delay: isMobile ? 0 : 1 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"

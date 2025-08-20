@@ -21,7 +21,7 @@ const About = () => {
         <div ref={ref} className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Text Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={isMobile ? {} : { opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ 
               duration: isMobile ? 0 : 0.8,
@@ -61,7 +61,7 @@ const About = () => {
 
           {/* Image */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={isMobile ? {} : { opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ 
               duration: isMobile ? 0 : 0.8,
