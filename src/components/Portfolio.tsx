@@ -172,7 +172,7 @@ const Portfolio = () => {
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
-            onClick={() => setSelectedProject(currentIndex)}
+            onClick={isMobile ? undefined : () => setSelectedProject(currentIndex)}
           >
             <motion.img
               key={currentIndex}
