@@ -247,19 +247,19 @@ const Portfolio = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 overflow-hidden"
             onClick={() => setSelectedProject(null)}
           >
             <motion.div
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
-              className="relative max-w-6xl max-h-[90vh] bg-white"
+              className="relative max-w-[90vw] max-h-[90vh] w-auto h-auto flex items-center justify-center bg-white shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
               <button
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 z-10 p-2 bg-white/90 hover:bg-white transition-colors duration-200"
+                className="absolute top-4 right-4 z-10 p-2 bg-white/90 hover:bg-white transition-colors duration-200 rounded-full"
               >
                 <X size={24} />
               </button>
@@ -267,7 +267,7 @@ const Portfolio = () => {
                 loading="lazy"
                 src={projects[selectedProject].image}
                 alt={projects[selectedProject].title}
-                className="w-full h-full object-cover"
+                className="max-w-full max-h-full object-contain"
               />
             </motion.div>
           </motion.div>
