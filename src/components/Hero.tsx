@@ -37,7 +37,7 @@ const Hero = () => {
         <motion.h1 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: isMobile ? 0.05 : 0.8, delay: isMobile ? 0 : 0.2 }}
+          transition={{ duration: isMobile ? 0 : 0.8, delay: isMobile ? 0 : 0.2 }}
           className="text-5xl md:text-7xl font-serif font-bold text-white mb-6 leading-tight"
         >
           Timeless Interior Design
@@ -46,7 +46,7 @@ const Hero = () => {
         <motion.p 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: isMobile ? 0.05 : 0.8, delay: isMobile ? 0 : 0.4 }}
+          transition={{ duration: isMobile ? 0 : 0.8, delay: isMobile ? 0 : 0.4 }}
           className="text-xl md:text-2xl text-white/90 mb-8 font-light"
         >
           Creating beautiful, functional spaces that reflect your unique style and enhance your everyday life
@@ -55,7 +55,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: isMobile ? 0.05 : 0.8, delay: isMobile ? 0 : 0.6 }}
+          transition={{ duration: isMobile ? 0 : 0.8, delay: isMobile ? 0 : 0.6 }}
         >
           <button 
             onClick={scrollToContact}
@@ -70,7 +70,7 @@ const Hero = () => {
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: isMobile ? 0.05 : 1, delay: isMobile ? 0 : 1 }}
+        transition={{ duration: isMobile ? 0 : 1, delay: isMobile ? 0 : 1 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <div className="w-px h-16 bg-white/50 mx-auto mb-4"></div>

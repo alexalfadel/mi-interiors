@@ -139,7 +139,7 @@ const Portfolio = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ 
-            duration: isMobile ? 0.05 : 0.8,
+            duration: isMobile ? 0 : 0.8,
             delay: isMobile ? 0 : 0,
             ease: "easeOut"
           }}
@@ -160,7 +160,7 @@ const Portfolio = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ 
-              duration: isMobile ? 0.05 : 0.8,
+              duration: isMobile ? 0 : 0.8,
               delay: isMobile ? 0 : 0,
               ease: "easeOut"
             }}
