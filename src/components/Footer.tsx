@@ -93,6 +93,8 @@ const Footer = () => {
           <p className="text-gray-500">
             © 2025 M I Interiors. All rights reserved.
           </p>
+          <a target='_blank' href='https://xelaweb.dev/' className='text-gray-500 hover:text-green-700'> Designed and Developed by Xela Web</a>
+            
         </div>
       </div>
     </footer>
